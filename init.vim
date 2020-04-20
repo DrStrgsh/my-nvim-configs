@@ -14,8 +14,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
-Plug 'mxw/vim-jsx'
-Plug 'pangloss/vim-javascript'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
@@ -23,6 +21,9 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'skalnik/vim-vroom'
 Plug 'mhinz/vim-startify'
 Plug 'cakebaker/scss-syntax.vim'
+
+" JS
+Plug 'sheerun/vim-polyglot'
 
 " autocomplete
 if has('nvim')
@@ -34,8 +35,8 @@ else
 endif
 
 " colorschame
-Plug 'tomasr/molokai'
 Plug 'ErichDonGubler/vim-sublime-monokai'
+
 call plug#end()
 
 color sublimemonokai
@@ -131,9 +132,8 @@ let g:lint_on_insert_leave = 1
 let g:lint_on_text_changed = 0
 
 let NERDTreeShowHidden=1
-let g:deoplete#enable_at_startup = 1
 
-let g:jsx_ext_required = 0
+let g:deoplete#enable_at_startup = 1
 
 "let g:multi_cursor_use_default_mapping=0
 " Default mapping
