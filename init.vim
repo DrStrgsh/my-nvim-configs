@@ -34,6 +34,10 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
+" Python
+Plug 'vim-python/python-syntax'
+Plug 'davidhalter/jedi-vim'
+
 " colorschame
 Plug 'ErichDonGubler/vim-sublime-monokai'
 
@@ -90,8 +94,6 @@ nmap ; <Plug>(easymotion-overwin-f)
 
 map <C-_> ,ci
 
-map <S-t> :TagbarToggle<CR>
-
 nnoremap <C-down> :m .+1<CR>==
 nnoremap <C-up> :m .-2<CR>==
 inoremap <C-down> <Esc>:m .+1<CR>==gi
@@ -117,6 +119,9 @@ function! WinMove(key)
     exec "wincmd ".a:key
   endif
 endfunction
+
+" Python
+let g:python_highlight_all = 1
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
